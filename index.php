@@ -2,7 +2,7 @@
     class Movie{
         public $title;
         public $year;
-        public $genre;
+        public $genre=[];
         public $director;
         public $oscars = 1;
 
@@ -23,7 +23,7 @@
 
     }
 
-    $movies_1 = new Movie("Il Padrino", 1972, "Noir");
+    $movies_1 = new Movie("Il Padrino", 1972, ["Drammatico", "Noir"]);
     $movies_1->setOscars(3);
     $movies_1->director = "Francis Ford Coppola";
 
@@ -53,8 +53,7 @@
     $movies_8->setOscars(3);
     $movies_8->director = "Roman Polanski";
 
-
-    echo "<div>".$movies_1->title." e' un film ".$movies_1->genre." girato dal regista ".$movies_1->director." nel ".$movies_1->year." ed ha vinto ".$movies_1->oscars." premi Oscar."."</div>";
+    echo "<div>".$movies_1->title." e' un film ".$movies_1->genre[0]." girato dal regista ".$movies_1->director." nel ".$movies_1->year." ed ha vinto ".$movies_1->oscars." premi Oscar."."</div>";
     echo "<div>".$movies_6->title." e' un film ".$movies_6->genre." girato dal regista ".$movies_6->director." nel ".$movies_6->year." ed ha vinto ".$movies_6->oscars." premi Oscar."."</div>";
 ?>
 
